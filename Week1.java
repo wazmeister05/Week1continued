@@ -17,4 +17,11 @@ public class Week1 {
         System.out.println(oddOrEven);
     }
 
+    public static void main(String[] args){
+        Week1.isOdd(222);               //false
+        Week1.isOdd(45);                //true
+        Week1.isMultiple(33, 3);    //true
+        Week1.isMultiple(247, 2);   //false
+    }
+
 }
