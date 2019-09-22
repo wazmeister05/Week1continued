@@ -7,17 +7,16 @@ public class Teams {
 
     public static void main(String[] args){
 
+        run();
+    }
+
+    private static void run() {
         Teams teams = new Teams();
+        teams.whoWon();
 
     }
 
     public Teams(){
-        setTeams();
-        whoWon();
-    }
-
-    public void setTeams(){
-
         Scanner scanner = new Scanner(System.in);
         System.out.print("Team 1: ");
         team1 = scanner.next();
@@ -28,14 +27,13 @@ public class Teams {
         team2 = scanner.next();
         System.out.println("Team 2 score: ");
         team2score = scanner.nextInt();
-
     }
 
     public void whoWon(){
         if (team1score < team2score){
-            System.out.println("Team 2 won!");
+            System.out.println(team2 + " won with " + team2score + " goals!");
         } else if(team1score > team2score){
-            System.out.println("Team 1 won!");
+            System.out.println(team1 + " won with " + team1score + " goals!");
         } else
             System.out.println("Draw!");
     }
